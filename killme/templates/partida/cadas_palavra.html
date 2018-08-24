@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Teste</title>
+        <meta>
+    </head>
+
+    <body>
+       <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" id='usuario' name="usuario" values='{{ request.user }}' />
+        <input type="submit" class="btn btn-success" value="Salvar"/>
+       </form>
+    </body>
+</html>
